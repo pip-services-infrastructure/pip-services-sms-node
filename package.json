@@ -1,5 +1,5 @@
 {
-    "name": "pip-services-smsdelivery-node",
+    "name": "pip-services-sms-node",
     "version": "1.0.0",
     "author": "Conceptual Vision Consulting LLC",
     "description": "Sms delivery sending microservice in Node.js",
@@ -19,7 +19,7 @@
     "noAnalyze": true,
     "repository": {
         "type": "git",
-        "url": "ssh://git@github.com:pip-services-infrastructure/pip-services-smsdelivery-node.git"
+        "url": "ssh://git@github.com:pip-services-infrastructure/pip-services-sms-node.git"
     },
     "license": "MIT",
     "engines": {

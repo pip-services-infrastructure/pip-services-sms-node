@@ -5,9 +5,9 @@ All input and output data is serialized in JSON format. Errors are returned in [
 
 * [SmsMessageV1 class](#class1)
 * [SmsRecipientV1 class](#class2)
-* [POST /sms_delivery/send_message](#operation1)
-* [POST /sms_delivery/send_message_to_recipient](#operation2)
-* [POST /sms_delivery/send_messsage_to_recipients](#operation3)
+* [POST /sms/send_message](#operation1)
+* [POST /sms/send_message_to_recipient](#operation2)
+* [POST /sms/send_messsage_to_recipients](#operation3)
 
 ## Data types
 

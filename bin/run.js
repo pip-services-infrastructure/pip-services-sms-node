@@ -1,7 +1,7 @@
-let SmsDeliveryProcess = require('../obj/src/container/SmsDeliveryProcess').SmsDeliveryProcess;
+let SmsProcess = require('../obj/src/container/SmsProcess').SmsProcess;
 
 try {
-    new SmsDeliveryProcess().run(process.argv);
+    new SmsProcess().run(process.argv);
 } catch (ex) {
     console.error(ex);
 }

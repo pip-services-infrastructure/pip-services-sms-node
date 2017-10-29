@@ -1,3 +1,3 @@
-let SmsDeliveryLambdaFunction = require('../obj/src/container/SmsDeliveryLambdaFunction').SmsDeliveryLambdaFunction;
+let SmsLambdaFunction = require('../obj/src/container/SmsLambdaFunction').SmsLambdaFunction;
 
-module.exports = new SmsDeliveryLambdaFunction().getHandler();
+module.exports = new SmsLambdaFunction().getHandler();

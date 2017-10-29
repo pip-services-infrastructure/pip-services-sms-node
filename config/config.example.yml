@@ -2,10 +2,10 @@
 - descriptor: "pip-services-commons:logger:console:default:1.0"
   level: "trace"
 
-- descriptor: "pip-services-smsdelivery:persistence:file:default:1.0"
+- descriptor: "pip-services-sms:persistence:file:default:1.0"
   path: "./data/sms_settings.json"
 
-- descriptor: "pip-services-smsdelivery:controller:default:default:1.0"
+- descriptor: "pip-services-sms:controller:default:default:1.0"
   message:
     from: 'somebody@somewhere.com'
     to: 'somebody@somewhere.com'
@@ -24,7 +24,7 @@
     verify_on_create: true
     verify_on_update: true
 
-- descriptor: "pip-services-smsdelivery:service:http:default:1.0"
+- descriptor: "pip-services-sms:service:http:default:1.0"
   connection:
     protocol: "http"
     host: "0.0.0.0"

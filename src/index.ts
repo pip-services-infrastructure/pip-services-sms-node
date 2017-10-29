@@ -4,4 +4,4 @@ export * from './services/version1';
 export * from './build';
 export * from './container';
 
-//module.exports = require('./container/SmsDeliverySenecaPlugin');
+//module.exports = require('./container/SmsSenecaPlugin');

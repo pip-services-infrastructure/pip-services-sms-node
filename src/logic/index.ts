@@ -1,2 +1,2 @@
-export { ISmsDeliveryController } from './ISmsDeliveryController';
-export { SmsDeliveryController } from './SmsDeliveryController';
+export { ISmsController } from './ISmsController';
+export { SmsController } from './SmsController';

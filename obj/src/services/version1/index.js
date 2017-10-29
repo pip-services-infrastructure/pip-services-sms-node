@@ -1,7 +1,7 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-var SmsDeliveryHttpServiceV1_1 = require("./SmsDeliveryHttpServiceV1");
-exports.SmsDeliveryHttpServiceV1 = SmsDeliveryHttpServiceV1_1.SmsDeliveryHttpServiceV1;
-var SmsDeliverySenecaServiceV1_1 = require("./SmsDeliverySenecaServiceV1");
-exports.SmsDeliverySenecaServiceV1 = SmsDeliverySenecaServiceV1_1.SmsDeliverySenecaServiceV1;
+var SmsHttpServiceV1_1 = require("./SmsHttpServiceV1");
+exports.SmsHttpServiceV1 = SmsHttpServiceV1_1.SmsHttpServiceV1;
+var SmsSenecaServiceV1_1 = require("./SmsSenecaServiceV1");
+exports.SmsSenecaServiceV1 = SmsSenecaServiceV1_1.SmsSenecaServiceV1;
 //# sourceMappingURL=index.js.map

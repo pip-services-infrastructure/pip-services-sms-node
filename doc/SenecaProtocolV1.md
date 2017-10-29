@@ -20,7 +20,7 @@ The microservice responds on the following requests:
 ```javascript
 seneca.act(
     {
-        role: 'sms_delivery',
+        role: 'sms',
         version: 1,
         cmd: ...cmd name....
         ... Arguments ...

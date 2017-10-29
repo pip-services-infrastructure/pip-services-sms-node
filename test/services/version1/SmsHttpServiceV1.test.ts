@@ -7,8 +7,8 @@ import { ConfigParams } from 'pip-services-commons-node';
 import { Descriptor } from 'pip-services-commons-node';
 import { References } from 'pip-services-commons-node';
 
-import { SmsDeliveryController } from '../../../src/logic/SmsDeliveryController';
-import { SmsDeliveryHttpServiceV1 } from '../../../src/services/version1/SmsDeliveryHttpServiceV1';
+import { SmsController } from '../../../src/logic/SmsController';
+import { SmsHttpServiceV1 } from '../../../src/services/version1/SmsHttpServiceV1';
 
 let httpConfig = ConfigParams.fromTuples(
     "connection.protocol", "http",
@@ -16,21 +16,21 @@ let httpConfig = ConfigParams.fromTuples(
     "connection.port", 3000
 );
 
-suite('SmsDeliveryHttpServiceV1', ()=> {
-    let service: SmsDeliveryHttpServiceV1;
+suite('SmsHttpServiceV1', ()=> {
+    let service: SmsHttpServiceV1;
 
     let rest: any;
 
     suiteSetup((done) => {
-        let controller = new SmsDeliveryController();
+        let controller = new SmsController();
         controller.configure(new ConfigParams());
 
-        service = new SmsDeliveryHttpServiceV1();
+        service = new SmsHttpServiceV1();
         service.configure(httpConfig);
 
         let references: References = References.fromTuples(
-            new Descriptor('pip-services-smsdelivery', 'controller', 'default', 'default', '1.0'), controller,
-            new Descriptor('pip-services-smsdelivery', 'service', 'http', 'default', '1.0'), service
+            new Descriptor('pip-services-sms', 'controller', 'default', 'default', '1.0'), controller,
+            new Descriptor('pip-services-sms', 'service', 'http', 'default', '1.0'), service
         );
         controller.setReferences(references);
         service.setReferences(references);
@@ -48,7 +48,7 @@ suite('SmsDeliveryHttpServiceV1', ()=> {
     });
 
     test('Send message', (done) => {
-        rest.post('/sms_delivery/send_message',
+        rest.post('/sms/send_message',
             {
                 message: {
                     to: '+15202353563',

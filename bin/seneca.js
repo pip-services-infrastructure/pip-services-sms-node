@@ -1,1 +1,1 @@
-module.exports = require('../obj/src/container/SmsDeliverySenecaPlugin');
+module.exports = require('../obj/src/container/SmsSenecaPlugin');

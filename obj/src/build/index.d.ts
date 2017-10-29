@@ -1,1 +1,1 @@
-export { SmsDeliveryServiceFactory } from './SmsDeliveryServiceFactory';
+export { SmsServiceFactory } from './SmsServiceFactory';

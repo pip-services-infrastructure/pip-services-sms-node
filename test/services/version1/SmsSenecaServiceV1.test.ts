@@ -8,19 +8,19 @@ import { References } from 'pip-services-commons-node';
 import { ConsoleLogger } from 'pip-services-commons-node';
 import { SenecaInstance } from 'pip-services-net-node';
 
-import { SmsDeliveryController } from '../../../src/logic/SmsDeliveryController';
-import { SmsDeliverySenecaServiceV1 } from '../../../src/services/version1/SmsDeliverySenecaServiceV1';
+import { SmsController } from '../../../src/logic/SmsController';
+import { SmsSenecaServiceV1 } from '../../../src/services/version1/SmsSenecaServiceV1';
 
-suite('SmsDeliverySenecaServiceV1', ()=> {
+suite('SmsSenecaServiceV1', ()=> {
     let seneca: any;
-    let service: SmsDeliverySenecaServiceV1;
-    let controller: SmsDeliveryController;
+    let service: SmsSenecaServiceV1;
+    let controller: SmsController;
 
     suiteSetup((done) => {
-        controller = new SmsDeliveryController();
+        controller = new SmsController();
         controller.configure(new ConfigParams());
 
-        service = new SmsDeliverySenecaServiceV1();
+        service = new SmsSenecaServiceV1();
         service.configure(ConfigParams.fromTuples(
             "connection.protocol", "none"
         ));
@@ -31,8 +31,8 @@ suite('SmsDeliverySenecaServiceV1', ()=> {
         let references: References = References.fromTuples(
             new Descriptor('pip-services-commons', 'logger', 'console', 'default', '1.0'), logger,
             new Descriptor('pip-services-net', 'seneca', 'instance', 'default', '1.0'), senecaAddon,
-            new Descriptor('pip-services-smsdelivery', 'controller', 'default', 'default', '1.0'), controller,
-            new Descriptor('pip-services-smsdelivery', 'service', 'seneca', 'default', '1.0'), service
+            new Descriptor('pip-services-sms', 'controller', 'default', 'default', '1.0'), controller,
+            new Descriptor('pip-services-sms', 'service', 'seneca', 'default', '1.0'), service
         );
 
         controller.setReferences(references);
@@ -50,7 +50,7 @@ suite('SmsDeliverySenecaServiceV1', ()=> {
     test('Send message', (done) => {
         seneca.act(
             {
-                role: 'sms_delivery',
+                role: 'sms',
                 cmd: 'send_message',
                 message: {
                     to: '+15202353563',

@@ -1,5 +1,5 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-var SmsDeliveryController_1 = require("./SmsDeliveryController");
-exports.SmsDeliveryController = SmsDeliveryController_1.SmsDeliveryController;
+var SmsController_1 = require("./SmsController");
+exports.SmsController = SmsController_1.SmsController;
 //# sourceMappingURL=index.js.map

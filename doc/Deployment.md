@@ -34,7 +34,7 @@ To learn more about Seneca microservices framework to go http://senecajs.org
     ...
     "dependencies": {
         ....
-        "pip-services-smsdelivery-node": "^1.0.0",
+        "pip-services-sms-node": "^1.0.0",
         ...
     }
 }
@@ -73,10 +73,10 @@ var config = {
     }
 };
 
-var plugin = require('pip-services-smsdelivery-node').SmsDeliverySenecaPlugin;
+var plugin = require('pip-services-sms-node').SmsSenecaPlugin;
 
 seneca.use(plugin, config);
 ```
 
 You can use the microservice by calling seneca commands directly as described in [Seneca Protocol](SenecaProtocolV1.md)
-or by using [SmsDeliverySenecaClient](https://github.com/pip-services-users/pip-clients-smsdelivery-node/NodeClientApiV1.md/#client_seneca)
+or by using [SmsSenecaClient](https://github.com/pip-services-users/pip-clients-sms-node/NodeClientApiV1.md/#client_seneca)
