@@ -193,7 +193,7 @@ export class SmsController implements IConfigurable, IReferenceable, ICommandabl
 
     private makeRecipientParameters(recipient: SmsRecipientV1, parameters: any): ConfigParams {
         parameters = this._parameters.override(parameters);
-        parameters.setAsObject(recipient);
+        parameters.append(recipient);
         return parameters;
     }
 
