@@ -2,7 +2,7 @@
 Object.defineProperty(exports, "__esModule", { value: true });
 let _ = require('lodash');
 let async = require('async');
-let mustache = require('mustache');
+let handlebars = require('handlebars');
 const pip_services_commons_node_1 = require("pip-services-commons-node");
 const pip_services_commons_node_2 = require("pip-services-commons-node");
 const pip_services_commons_node_3 = require("pip-services-commons-node");
@@ -94,9 +94,13 @@ class SmsController {
             template = value["en"];
         return "" + template;
     }
-    renderTemplate(value, parameters, language = 'en') {
+    compileTemplate(value, language) {
         let template = this.getLanguageTemplate(value, language);
-        return template ? mustache.render(template, parameters) : null;
+        return template ? handlebars.compile(template) : null;
+    }
+    renderTemplate(value, parameters, language = 'en') {
+        let template = this.compileTemplate(value, language);
+        return template ? template(parameters) : null;
     }
     sendMessage(correlationId, message, parameters, callback) {
         // Skip processing if sms is disabled or message has no destination
