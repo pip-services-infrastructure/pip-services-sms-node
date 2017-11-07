@@ -143,7 +143,7 @@ class SmsController {
     }
     sendMessageToRecipient(correlationId, recipient, message, parameters, callback) {
         // Skip processing if sms is disabled
-        if (!this._opened || recipient == null || recipient.id == null) {
+        if (!this._opened || recipient == null || recipient.phone == null) {
             if (callback)
                 callback(null);
             return;
