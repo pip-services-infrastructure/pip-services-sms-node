@@ -48,7 +48,7 @@ suite('SmsHttpServiceV1', ()=> {
     });
 
     test('Send message', (done) => {
-        rest.post('/sms/send_message',
+        rest.post('/v1/sms/send_message',
             {
                 message: {
                     to: '+15202353563',
