@@ -16,7 +16,8 @@ class SmsController {
         this._disabled = false;
         this._connectTimeout = 30000;
         this._maxPrice = 0.5;
-        this._smsType = 'Promotional';
+        //private _smsType: string = 'Promotional';
+        this._smsType = 'Transactional';
     }
     configure(config) {
         this._config = config.setDefaults(SmsController._defaultConfig);

@@ -43,7 +43,8 @@ export class SmsController implements IConfigurable, IReferenceable, ICommandabl
     private _disabled: boolean = false;
     private _connectTimeout: number = 30000;
     private _maxPrice: number = 0.5;
-    private _smsType: string = 'Promotional';
+    //private _smsType: string = 'Promotional';
+    private _smsType: string = 'Transactional';
 
     private _commandSet: SmsCommandSet;
 
