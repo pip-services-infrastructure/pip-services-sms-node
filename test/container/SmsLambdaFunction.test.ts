@@ -5,7 +5,7 @@ let assert = require('chai').assert;
 import { Descriptor } from 'pip-services-commons-node';
 import { ConfigParams } from 'pip-services-commons-node';
 import { References } from 'pip-services-commons-node';
-import { ConsoleLogger } from 'pip-services-commons-node';
+import { ConsoleLogger } from 'pip-services-components-node';
 
 import { SmsController } from '../../src/logic/SmsController';
 import { SmsLambdaFunction } from '../../src/container/SmsLambdaFunction';
@@ -15,7 +15,7 @@ suite('SmsLambdaFunction', ()=> {
 
     suiteSetup((done) => {
         let config = ConfigParams.fromTuples(
-            'logger.descriptor', 'pip-services-commons:logger:console:default:1.0',
+            'logger.descriptor', 'pip-services:logger:console:default:1.0',
             'controller.descriptor', 'pip-services-sms:controller:default:default:1.0'
         );
 

@@ -26,7 +26,7 @@ export declare class SmsController implements IConfigurable, IReferenceable, ICo
     configure(config: ConfigParams): void;
     setReferences(references: IReferences): void;
     getCommandSet(): CommandSet;
-    isOpened(): boolean;
+    isOpen(): boolean;
     open(correlationId: string, callback: (err: any) => void): void;
     close(correlationId: string, callback: (err: any) => void): void;
     private getLanguageTemplate(value, language?);

@@ -4,13 +4,13 @@ let _ = require('lodash');
 let async = require('async');
 let mustache = require('mustache');
 const pip_services_commons_node_1 = require("pip-services-commons-node");
-const pip_services_commons_node_2 = require("pip-services-commons-node");
-const pip_services_commons_node_3 = require("pip-services-commons-node");
+const pip_services_components_node_1 = require("pip-services-components-node");
+const pip_services_components_node_2 = require("pip-services-components-node");
 const SmsCommandSet_1 = require("./SmsCommandSet");
 class SmsController {
     constructor() {
-        this._credentialResolver = new pip_services_commons_node_2.CredentialResolver();
-        this._logger = new pip_services_commons_node_3.CompositeLogger();
+        this._credentialResolver = new pip_services_components_node_1.CredentialResolver();
+        this._logger = new pip_services_components_node_2.CompositeLogger();
         this._opened = false;
         this._parameters = new pip_services_commons_node_1.ConfigParams();
         this._disabled = false;
@@ -38,7 +38,7 @@ class SmsController {
             this._commandSet = new SmsCommandSet_1.SmsCommandSet(this);
         return this._commandSet;
     }
-    isOpened() {
+    isOpen() {
         return this._opened;
     }
     open(correlationId, callback) {

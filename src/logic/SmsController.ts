@@ -7,13 +7,13 @@ import { IConfigurable } from 'pip-services-commons-node';
 import { IReferences } from 'pip-services-commons-node';
 import { Descriptor } from 'pip-services-commons-node';
 import { IReferenceable } from 'pip-services-commons-node';
-import { CredentialParams } from 'pip-services-commons-node';
-import { CredentialResolver } from 'pip-services-commons-node';
+import { CredentialParams } from 'pip-services-components-node';
+import { CredentialResolver } from 'pip-services-components-node';
 import { ICommandable } from 'pip-services-commons-node';
 import { CommandSet } from 'pip-services-commons-node';
 import { BadRequestException } from 'pip-services-commons-node';
 import { IOpenable } from 'pip-services-commons-node';
-import { CompositeLogger } from 'pip-services-commons-node';
+import { CompositeLogger } from 'pip-services-components-node';
 
 import { SmsMessageV1 } from '../data/version1/SmsMessageV1';
 import { SmsRecipientV1 } from '../data/version1/SmsRecipientV1';
@@ -73,7 +73,7 @@ export class SmsController implements IConfigurable, IReferenceable, ICommandabl
         return this._commandSet;
     }
 
-    public isOpened(): boolean {
+    public isOpen(): boolean {
         return this._opened;
     }
 

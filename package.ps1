@@ -22,6 +22,8 @@ try {
     # Test using curl
     Start-Sleep -Seconds 10
     Invoke-WebRequest -Uri http://localhost:8080/heartbeat
+    #$postParams = @{to='+15202353563';text='This is a test message'}
+    #Invoke-WebRequest -Uri http://localhost:8080/v1/sms/send_message -Method POST -Body $postParams
 
     Write-Host "The container was successfully built."
 } finally {
