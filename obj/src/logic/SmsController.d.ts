@@ -1,10 +1,10 @@
-import { ConfigParams } from 'pip-services-commons-node';
-import { IConfigurable } from 'pip-services-commons-node';
-import { IReferences } from 'pip-services-commons-node';
-import { IReferenceable } from 'pip-services-commons-node';
-import { ICommandable } from 'pip-services-commons-node';
-import { CommandSet } from 'pip-services-commons-node';
-import { IOpenable } from 'pip-services-commons-node';
+import { ConfigParams } from 'pip-services3-commons-node';
+import { IConfigurable } from 'pip-services3-commons-node';
+import { IReferences } from 'pip-services3-commons-node';
+import { IReferenceable } from 'pip-services3-commons-node';
+import { ICommandable } from 'pip-services3-commons-node';
+import { CommandSet } from 'pip-services3-commons-node';
+import { IOpenable } from 'pip-services3-commons-node';
 import { SmsMessageV1 } from '../data/version1/SmsMessageV1';
 import { SmsRecipientV1 } from '../data/version1/SmsRecipientV1';
 import { ISmsController } from './ISmsController';
@@ -29,10 +29,10 @@ export declare class SmsController implements IConfigurable, IReferenceable, ICo
     isOpen(): boolean;
     open(correlationId: string, callback: (err: any) => void): void;
     close(correlationId: string, callback: (err: any) => void): void;
-    private getLanguageTemplate(value, language?);
-    private renderTemplate(value, parameters, language?);
+    private getLanguageTemplate;
+    private renderTemplate;
     sendMessage(correlationId: string, message: SmsMessageV1, parameters: ConfigParams, callback?: (err: any) => void): void;
-    private makeRecipientParameters(recipient, parameters);
+    private makeRecipientParameters;
     sendMessageToRecipient(correlationId: string, recipient: SmsRecipientV1, message: SmsMessageV1, parameters: ConfigParams, callback?: (err: any) => void): void;
     sendMessageToRecipients(correlationId: string, recipients: SmsRecipientV1[], message: SmsMessageV1, parameters: ConfigParams, callback?: (err: any) => void): void;
 }

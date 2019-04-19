@@ -1,7 +1,7 @@
 # Configuration Guide <br/> SMS Delivery Microservice
 
 Sms delivery microservice configuration structure follows the 
-[standard configuration](https://github.com/pip-services/pip-services-container-node/doc/Configuration.md) 
+[standard configuration](https://github.com/pip-services/pip-services3-container-node/doc/Configuration.md) 
 structure. 
 
 * [controller](#controller)
@@ -78,4 +78,4 @@ Example:
 ```
 
 For more information on this section read 
-[Pip.Services Configuration Guide](https://github.com/pip-services/pip-services-container-node/doc/Configuration.md#deps)
+[Pip.Services Configuration Guide](https://github.com/pip-services/pip-services3-container-node/doc/Configuration.md#deps)

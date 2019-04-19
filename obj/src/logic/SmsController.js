@@ -3,16 +3,16 @@ Object.defineProperty(exports, "__esModule", { value: true });
 let _ = require('lodash');
 let async = require('async');
 let mustache = require('mustache');
-const pip_services_commons_node_1 = require("pip-services-commons-node");
-const pip_services_components_node_1 = require("pip-services-components-node");
-const pip_services_components_node_2 = require("pip-services-components-node");
+const pip_services3_commons_node_1 = require("pip-services3-commons-node");
+const pip_services3_components_node_1 = require("pip-services3-components-node");
+const pip_services3_components_node_2 = require("pip-services3-components-node");
 const SmsCommandSet_1 = require("./SmsCommandSet");
 class SmsController {
     constructor() {
-        this._credentialResolver = new pip_services_components_node_1.CredentialResolver();
-        this._logger = new pip_services_components_node_2.CompositeLogger();
+        this._credentialResolver = new pip_services3_components_node_1.CredentialResolver();
+        this._logger = new pip_services3_components_node_2.CompositeLogger();
         this._opened = false;
-        this._parameters = new pip_services_commons_node_1.ConfigParams();
+        this._parameters = new pip_services3_commons_node_1.ConfigParams();
         this._disabled = false;
         this._connectTimeout = 30000;
         this._maxPrice = 0.5;
@@ -194,6 +194,6 @@ class SmsController {
         }, callback);
     }
 }
-SmsController._defaultConfig = pip_services_commons_node_1.ConfigParams.fromTuples('message.from', null, 'options.connect_timeout', 30000, 'options.max_price', 0.5, 'options.sms_type', 'Promotional');
+SmsController._defaultConfig = pip_services3_commons_node_1.ConfigParams.fromTuples('message.from', null, 'options.connect_timeout', 30000, 'options.max_price', 0.5, 'options.sms_type', 'Promotional');
 exports.SmsController = SmsController;
 //# sourceMappingURL=SmsController.js.map
