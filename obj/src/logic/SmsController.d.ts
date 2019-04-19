@@ -29,10 +29,10 @@ export declare class SmsController implements IConfigurable, IReferenceable, ICo
     isOpen(): boolean;
     open(correlationId: string, callback: (err: any) => void): void;
     close(correlationId: string, callback: (err: any) => void): void;
-    private getLanguageTemplate;
-    private renderTemplate;
+    private getLanguageTemplate(value, language?);
+    private renderTemplate(value, parameters, language?);
     sendMessage(correlationId: string, message: SmsMessageV1, parameters: ConfigParams, callback?: (err: any) => void): void;
-    private makeRecipientParameters;
+    private makeRecipientParameters(recipient, parameters);
     sendMessageToRecipient(correlationId: string, recipient: SmsRecipientV1, message: SmsMessageV1, parameters: ConfigParams, callback?: (err: any) => void): void;
     sendMessageToRecipients(correlationId: string, recipients: SmsRecipientV1[], message: SmsMessageV1, parameters: ConfigParams, callback?: (err: any) => void): void;
 }
