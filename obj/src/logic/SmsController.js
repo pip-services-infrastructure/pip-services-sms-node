@@ -194,6 +194,6 @@ class SmsController {
         }, callback);
     }
 }
-SmsController._defaultConfig = pip_services3_commons_node_1.ConfigParams.fromTuples('message.from', null, 'options.connect_timeout', 30000, 'options.max_price', 0.5, 'options.sms_type', 'Promotional');
 exports.SmsController = SmsController;
+SmsController._defaultConfig = pip_services3_commons_node_1.ConfigParams.fromTuples('message.from', null, 'options.connect_timeout', 30000, 'options.max_price', 0.5, 'options.sms_type', 'Promotional');
 //# sourceMappingURL=SmsController.js.map
